@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-    FlexContainer,
-    OneThreeGridContainer
-} from '../../../../components/design-system/layout'
-import { AnchorText } from '../../../../components/design-system/typography'
+import { FlexContainer } from '../../../../components/design-system/layout'
 import { SideBarAnchorText } from './SideBarAnchorText'
 
 export const SideBarMenu = () => {
