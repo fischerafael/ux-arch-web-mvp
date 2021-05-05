@@ -1,12 +1,14 @@
 import React from 'react'
-import { DashboardBody } from '../../components/shared/DashboardBody'
-import { NavBar } from '../../components/shared/NavBar'
+import { FourGridContainer } from '../../components/design-system/layout'
+import { SideBar } from './SideBar'
 
 export const Dashboard = () => {
     return (
-        <>
-            <NavBar />
-            <DashboardBody />
-        </>
+        <FourGridContainer
+            as="main"
+            style={{ minHeight: '100vh', padding: '0 2rem' }}
+        >
+            <SideBar />
+        </FourGridContainer>
     )
 }
