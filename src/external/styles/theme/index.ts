@@ -12,7 +12,12 @@ const colors = {
     background: '#fafafa'
 }
 
+const shadow = {
+    boxShadow: '5px 5px 20px rgba(68,68,68,0.25)'
+}
+
 export const theme = {
     colors,
-    width
+    width,
+    shadow
 }

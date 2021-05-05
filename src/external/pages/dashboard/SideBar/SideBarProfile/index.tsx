@@ -1,5 +1,8 @@
 import React from 'react'
-import { FlexContainer } from '../../../../components/design-system/layout'
+import {
+    FlexContainer,
+    OneThreeGridContainer
+} from '../../../../components/design-system/layout'
 import {
     SecondaryTitle,
     SubTitle
@@ -8,24 +11,26 @@ import { theme } from '../../../../styles/theme'
 
 export const SideBarProfile = () => {
     return (
-        <FlexContainer
+        <OneThreeGridContainer
             as="section"
             style={{
                 width: '100%',
                 minHeight: '20vh',
-                justifyContent: 'space-between'
+                alignItems: 'center'
             }}
         >
-            <FlexContainer
-                as="img"
-                src="https://avatars.githubusercontent.com/u/47259718?v=4"
-                alt="Rafael Fischer"
-                style={{
-                    maxWidth: '4rem',
-                    borderRadius: '2rem',
-                    border: `.2rem solid ${theme.colors.contrast}`
-                }}
-            />
+            <FlexContainer>
+                <FlexContainer
+                    as="img"
+                    src="https://avatars.githubusercontent.com/u/47259718?v=4"
+                    alt="Rafael Fischer"
+                    style={{
+                        maxWidth: '3rem',
+                        borderRadius: '1.5rem',
+                        border: `.2rem solid ${theme.colors.contrast}`
+                    }}
+                />
+            </FlexContainer>
 
             <FlexContainer
                 style={{
@@ -36,6 +41,6 @@ export const SideBarProfile = () => {
                 <SecondaryTitle>Olá,</SecondaryTitle>
                 <SubTitle style={{ fontSize: '1rem' }}>Rafael Fischer</SubTitle>
             </FlexContainer>
-        </FlexContainer>
+        </OneThreeGridContainer>
     )
 }

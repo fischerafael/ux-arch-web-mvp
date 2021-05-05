@@ -4,10 +4,7 @@ import { SideBar } from './SideBar'
 
 export const Dashboard = () => {
     return (
-        <FourGridContainer
-            as="main"
-            style={{ minHeight: '100vh', padding: '0 2rem' }}
-        >
+        <FourGridContainer as="main" style={{ minHeight: '100vh' }}>
             <SideBar />
         </FourGridContainer>
     )

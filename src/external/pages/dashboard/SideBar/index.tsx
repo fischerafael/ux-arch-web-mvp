@@ -3,6 +3,7 @@ import { FlexContainer } from '../../../components/design-system/layout'
 import { SideBarProfile } from './SideBarProfile'
 import { SideBarHeader } from './SideBarHeader'
 import { SideBarMenu } from './SideBarMenu'
+import { theme } from '../../../styles/theme'
 
 export const SideBar = () => {
     return (
@@ -11,7 +12,9 @@ export const SideBar = () => {
             style={{
                 alignItems: 'flex-start',
                 justifyContent: 'flex-start',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                boxShadow: `${theme.shadow.boxShadow}`,
+                padding: '0 1rem'
             }}
         >
             <SideBarHeader />
