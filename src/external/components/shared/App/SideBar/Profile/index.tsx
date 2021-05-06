@@ -38,7 +38,7 @@ const ProfileContainer = styled(GridContainer)`
     height: 20%;
     width: 100%;
     align-items: center;
-    @media (max-width: ${theme.width.sm}) {
+    @media (max-width: ${theme.width.md}) {
         grid-template-columns: 1fr;
     }
 `
@@ -46,7 +46,7 @@ const ProfileContainer = styled(GridContainer)`
 const UserNameContainer = styled(FlexContainer)`
     flex-direction: column;
     align-items: flex-start;
-    @media (max-width: ${theme.width.sm}) {
+    @media (max-width: ${theme.width.md}) {
         display: none;
     }
 `

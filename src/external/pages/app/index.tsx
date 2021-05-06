@@ -14,15 +14,9 @@ export const App = () => {
             <MainSection>
                 <NavCard
                     href="#"
-                    title="Avaliar"
-                    src="/assets/icons/evaluate.svg"
-                    description="Avalie experiências arquitetônicas de projetos e auxilie o UX Arch a prever as atmosferas com mais precisão"
-                />
-                <NavCard
-                    href="#"
-                    title="Consultar"
-                    src="/assets/icons/search.svg"
-                    description="Confira os projetos e as experiências arquitetônicas utilizadas pelo algoritmo do UX Arch"
+                    title="Atmosferas"
+                    src="/assets/icons/atmosphere.svg"
+                    description="Avalie e consulte experiências arquitetônicas de projetos utilizados pelo algoritmo do UX Arch"
                 />
             </MainSection>
         </AppContainer>
@@ -32,11 +26,7 @@ export const App = () => {
 const AppContainer = styled(GridContainer)`
     grid-template-columns: 1fr 3fr;
 
-    @media (max-width: ${theme.width.lg}) {
-        grid-template-columns: 1fr 2fr;
-    }
-
-    @media (max-width: ${theme.width.md}) {
-        grid-template-columns: 1fr 1fr;
+    @media (max-width: ${theme.width.sm}) {
+        grid-template-columns: 1fr 6fr;
     }
 `

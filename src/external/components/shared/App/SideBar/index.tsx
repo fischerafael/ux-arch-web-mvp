@@ -1,9 +1,9 @@
 import React from 'react'
 
 import { Image } from '../../../design-system/display'
-import { FlexContainer, GridContainer } from '../../../design-system/layout'
-import { AnchorText } from '../../../design-system/typography'
+import { FlexContainer } from '../../../design-system/layout'
 import { Profile } from './Profile'
+import { SideBarLink } from './SideBarLink'
 
 export const SideBar = () => {
     return (
@@ -34,35 +34,20 @@ export const SideBar = () => {
                     width: '100%',
                     flexDirection: 'column',
                     justifyContent: 'flex-start',
-                    alignItems: 'flex-start',
-                    gap: '1rem'
+                    alignItems: 'flex-start'
                 }}
             >
-                <GridContainer
-                    style={{
-                        gridTemplateColumns: '1fr 3fr',
-                        width: '100%'
-                    }}
-                >
-                    <Image
-                        src="/assets/icons/atmosphere.svg"
-                        style={{ justifySelf: 'center' }}
-                    />
-                    <AnchorText>Atmosferas</AnchorText>
-                </GridContainer>
+                <SideBarLink
+                    title="Atmosferas"
+                    href="/#"
+                    src="/assets/icons/atmosphere.svg"
+                />
 
-                <GridContainer
-                    style={{
-                        gridTemplateColumns: '1fr 3fr',
-                        width: '100%'
-                    }}
-                >
-                    <Image
-                        src="/assets/icons/exit.svg"
-                        style={{ justifySelf: 'center' }}
-                    />
-                    <AnchorText>Sair</AnchorText>
-                </GridContainer>
+                <SideBarLink
+                    title="Sair"
+                    href="/#"
+                    src="/assets/icons/exit.svg"
+                />
             </FlexContainer>
         </FlexContainer>
     )

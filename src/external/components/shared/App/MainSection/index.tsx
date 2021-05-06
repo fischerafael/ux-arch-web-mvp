@@ -38,7 +38,7 @@ export const MainSection = ({ children }) => {
                         style={{ height: '.5rem' }}
                     />
                 </AnchorText>
-                <AnchorText>Atmosferas</AnchorText>
+                <AnchorText>Dashboard</AnchorText>
             </FlexContainer>
 
             <MainSectionContainer
