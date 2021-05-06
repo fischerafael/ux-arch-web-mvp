@@ -1,8 +1,8 @@
 import React from 'react'
-import { theme } from '../../../../styles/theme'
+
 import { Image } from '../../../design-system/display'
 import { FlexContainer, GridContainer } from '../../../design-system/layout'
-import { AnchorText, SubTitle, Title } from '../../../design-system/typography'
+import { AnchorText } from '../../../design-system/typography'
 import { Profile } from './Profile'
 
 export const SideBar = () => {
