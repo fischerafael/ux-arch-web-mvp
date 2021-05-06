@@ -29,4 +29,11 @@ const resetCSS = css`
         transition: 0.5s;
         border-radius: 0.5rem;
     }
+    ::-webkit-scrollbar {
+        width: 0.25rem;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: ${(props) => props.theme.colors.contrast};
+        border-radius: 0;
+    }
 `
