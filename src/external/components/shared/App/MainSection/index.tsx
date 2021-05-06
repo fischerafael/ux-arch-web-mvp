@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styled from 'styled-components'
+import { IBreadCrumb } from '../../../../../entities/BreadCrumb'
 import { theme } from '../../../../styles/theme'
+
 import { Image } from '../../../design-system/display'
 import { FlexContainer, GridContainer } from '../../../design-system/layout'
 import { AnchorText } from '../../../design-system/typography'
 
-export const MainSection = ({ children }) => {
+interface Props {
+    breadCrumbLinks: IBreadCrumb[]
+    children: ReactNode
+}
+
+export const MainSection = ({ breadCrumbLinks, children }: Props) => {
     return (
         <FlexContainer
             as="section"
@@ -32,13 +39,17 @@ export const MainSection = ({ children }) => {
                     gap: '.5rem'
                 }}
             >
-                <AnchorText>
-                    <Image
-                        src="/assets/icons/arrow-right.svg"
-                        style={{ height: '.5rem' }}
-                    />
-                </AnchorText>
-                <AnchorText>Dashboard</AnchorText>
+                {breadCrumbLinks.map((link) => (
+                    <React.Fragment key={link.href}>
+                        <AnchorText>
+                            <Image
+                                src="/assets/icons/arrow-right.svg"
+                                style={{ height: '.5rem' }}
+                            />
+                        </AnchorText>
+                        <AnchorText>{link.title}</AnchorText>
+                    </React.Fragment>
+                ))}
             </FlexContainer>
 
             <MainSectionContainer

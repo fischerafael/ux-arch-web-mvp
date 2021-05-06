@@ -1,7 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-import { theme } from '../../styles/theme'
-import { GridContainer } from '../../components/design-system/layout'
+import { AppContainer } from '../../components/design-system/templates'
 
 import { MainSection } from '../../components/shared/App/MainSection'
 import { NavCard } from '../../components/shared/App/NavCard'
@@ -22,11 +20,3 @@ export const App = () => {
         </AppContainer>
     )
 }
-
-const AppContainer = styled(GridContainer)`
-    grid-template-columns: 1fr 3fr;
-
-    @media (max-width: ${theme.width.sm}) {
-        grid-template-columns: 1fr 6fr;
-    }
-`
