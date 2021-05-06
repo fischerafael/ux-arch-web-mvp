@@ -1,11 +1,19 @@
 import React from 'react'
-import { FourGridContainer } from '../../components/design-system/layout'
+import { OneThreeGridTemplate } from '../../components/design-system/layout'
+import { MainContent } from './MainContent'
 import { SideBar } from './SideBar'
 
 export const Dashboard = () => {
     return (
-        <FourGridContainer as="main" style={{ minHeight: '100vh' }}>
+        <OneThreeGridTemplate
+            as="main"
+            style={{
+                minHeight: '100vh',
+                alignItems: 'flex-start'
+            }}
+        >
             <SideBar />
-        </FourGridContainer>
+            <MainContent />
+        </OneThreeGridTemplate>
     )
 }

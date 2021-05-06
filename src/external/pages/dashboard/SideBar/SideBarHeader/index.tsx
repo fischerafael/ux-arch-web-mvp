@@ -8,7 +8,8 @@ export const SideBarHeader = () => {
             style={{
                 width: '100%',
                 minHeight: '20vh',
-                justifyContent: 'flex-start'
+                justifyContent: 'flex-start',
+                padding: '0 1rem'
             }}
         >
             <FlexContainer

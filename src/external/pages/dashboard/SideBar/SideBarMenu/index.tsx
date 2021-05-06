@@ -1,4 +1,8 @@
 import React from 'react'
+import {
+    GhostButton,
+    OutlineButton
+} from '../../../../components/design-system/input'
 import { FlexContainer } from '../../../../components/design-system/layout'
 import { SideBarAnchorText } from './SideBarAnchorText'
 
@@ -30,7 +34,13 @@ export const SideBarMenu = () => {
                 src="/assets/icons/sidebar/config.svg"
                 alt="atmosferas"
             >
-                Projetos
+                Configurações
+            </SideBarAnchorText>
+            <SideBarAnchorText
+                src="/assets/icons/sidebar/exit.svg"
+                alt="atmosferas"
+            >
+                Sair
             </SideBarAnchorText>
         </FlexContainer>
     )

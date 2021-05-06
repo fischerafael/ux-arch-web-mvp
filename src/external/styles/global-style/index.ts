@@ -23,12 +23,10 @@ const resetCSS = css`
         cursor: pointer;
         border: none;
         padding: 0 2rem;
-        height: 2.5rem;
+        height: 3rem;
         font-weight: bold;
         font-size: 0.75rem;
         transition: 0.5s;
-        &:hover {
-            filter: grayscale(100);
-        }
+        border-radius: 0.5rem;
     }
 `

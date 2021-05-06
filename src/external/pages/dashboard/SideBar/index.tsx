@@ -4,22 +4,38 @@ import { SideBarProfile } from './SideBarProfile'
 import { SideBarHeader } from './SideBarHeader'
 import { SideBarMenu } from './SideBarMenu'
 import { theme } from '../../../styles/theme'
+import styled from 'styled-components'
 
 export const SideBar = () => {
     return (
-        <FlexContainer
+        <SideBarContainer
             as="aside"
             style={{
                 alignItems: 'flex-start',
                 justifyContent: 'flex-start',
                 flexDirection: 'column',
                 boxShadow: `${theme.shadow.boxShadow}`,
-                padding: '0 1rem'
+                height: '100%',
+                position: 'relative'
             }}
         >
-            <SideBarHeader />
-            <SideBarProfile />
-            <SideBarMenu />
-        </FlexContainer>
+            <FlexContainer
+                style={{
+                    alignItems: 'flex-start',
+                    justifyContent: 'flex-start',
+                    flexDirection: 'column',
+                    position: 'absolute',
+                    width: '100%'
+                }}
+            >
+                <SideBarHeader />
+                <SideBarProfile />
+                <SideBarMenu />
+            </FlexContainer>
+        </SideBarContainer>
     )
 }
+
+const SideBarContainer = styled(FlexContainer)`
+    z-index: 10;
+`

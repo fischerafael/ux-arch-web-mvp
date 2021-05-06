@@ -8,10 +8,19 @@ export const FlexContainer = styled.div`
 export const FourGridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 1rem;
+`
+export const ThreeGridContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 `
 export const OneThreeGridContainer = styled.div`
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     gap: 1rem;
+`
+export const OneThreeGridTemplate = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 `
