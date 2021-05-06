@@ -4,7 +4,7 @@ import { Image } from '../../../design-system/display'
 import { FlexContainer } from '../../../design-system/layout'
 import { Paragraph, SubTitle } from '../../../design-system/typography'
 
-const NavCard = () => {
+export const NavCard = ({ href, src, title, description }) => {
     return (
         <FlexContainer
             as="article"
@@ -27,12 +27,8 @@ const NavCard = () => {
                     width: '100%'
                 }}
             >
-                <Image
-                    src="/assets/icons/atmosphere.svg"
-                    style={{ height: '2rem' }}
-                />
-                <SubTitle style={{ fontSize: '1rem' }}>Atmosferas</SubTitle>
-                <Paragraph></Paragraph>
+                <Image src={src} style={{ height: '2rem', width: '2rem' }} />
+                <SubTitle style={{ fontSize: '1rem' }}>{title}</SubTitle>
             </FlexContainer>
 
             <FlexContainer
@@ -42,13 +38,8 @@ const NavCard = () => {
                     alignItems: 'flex-start'
                 }}
             >
-                <Paragraph>
-                    Auxilie o UX Arch a melhor prever como os usuários irão
-                    experenciar os espaços que você projeta
-                </Paragraph>
+                <Paragraph>{description}</Paragraph>
             </FlexContainer>
         </FlexContainer>
     )
 }
-
-export default NavCard
