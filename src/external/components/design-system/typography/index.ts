@@ -17,4 +17,8 @@ export const AnchorText = styled.a`
     font-weight: normal;
     font-size: 0.75rem;
     text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        color: ${(props) => props.theme.colors.primary};
+    }
 `
