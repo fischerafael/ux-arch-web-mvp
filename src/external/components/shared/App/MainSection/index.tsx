@@ -8,7 +8,7 @@ import { FlexContainer, GridContainer } from '../../../design-system/layout'
 import { AnchorText } from '../../../design-system/typography'
 
 interface Props {
-    breadCrumbLinks: IBreadCrumb[]
+    breadCrumbLinks?: IBreadCrumb[]
     children: ReactNode
 }
 
@@ -39,17 +39,18 @@ export const MainSection = ({ breadCrumbLinks, children }: Props) => {
                     gap: '.5rem'
                 }}
             >
-                {breadCrumbLinks.map((link) => (
-                    <React.Fragment key={link.href}>
-                        <AnchorText>
-                            <Image
-                                src="/assets/icons/arrow-right.svg"
-                                style={{ height: '.5rem' }}
-                            />
-                        </AnchorText>
-                        <AnchorText>{link.title}</AnchorText>
-                    </React.Fragment>
-                ))}
+                {breadCrumbLinks &&
+                    breadCrumbLinks.map((link) => (
+                        <React.Fragment key={link.href}>
+                            <AnchorText>
+                                <Image
+                                    src="/assets/icons/arrow-right.svg"
+                                    style={{ height: '.5rem' }}
+                                />
+                            </AnchorText>
+                            <AnchorText>{link.title}</AnchorText>
+                        </React.Fragment>
+                    ))}
             </FlexContainer>
 
             <MainSectionContainer
@@ -67,7 +68,8 @@ export const MainSection = ({ breadCrumbLinks, children }: Props) => {
 }
 
 const MainSectionContainer = styled(GridContainer)`
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    /* grid-template-columns: repeat(3, 1fr);
 
     @media (max-width: ${theme.width.lg}) {
         grid-template-columns: repeat(2, 1fr);
@@ -75,5 +77,5 @@ const MainSectionContainer = styled(GridContainer)`
 
     @media (max-width: ${theme.width.md}) {
         grid-template-columns: 1fr;
-    }
+    } */
 `
