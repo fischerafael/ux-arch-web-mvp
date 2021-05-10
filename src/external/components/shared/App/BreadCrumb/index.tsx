@@ -1,17 +1,11 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 
-import { IBreadCrumb } from '../../../../../entities/BreadCrumb'
-
 import { Image } from '../../../design-system/display'
 import { FlexContainer } from '../../../design-system/layout'
 import { AnchorText } from '../../../design-system/typography'
 
-interface Props {
-    breadCrumbLinks?: IBreadCrumb[]
-}
-
-export const BreadCrumb = ({ breadCrumbLinks }: Props) => {
+export const BreadCrumb = () => {
     const { pathname, back } = useRouter()
 
     const links = pathname
