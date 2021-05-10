@@ -1,18 +1,23 @@
 import React from 'react'
+import { IProject } from '../../../../../src/entities/Project'
+import { EvaluatedProject } from '../../../../../src/external/pages/app/atmospheres/evaluate/project'
+import { api } from '../../../../../src/use-cases/config'
 
-const index = ({ data }) => {
-    console.log(data)
+interface Props {
+    data: IProject
+}
 
-    return <div>oi</div>
+const index = ({ data }: Props) => {
+    return <EvaluatedProject project={data} />
 }
 
 export default index
 
-export function getServerSideProps(ctx) {
-    console.log(ctx.params.id)
-    const data = { teste: 'oi' }
+export async function getServerSideProps(ctx) {
+    const projectId = ctx.params.id as string
+    const { data } = await api.get(`/projects?id=${projectId}`)
 
     return {
-        props: data
+        props: { data: data[0] }
     }
 }

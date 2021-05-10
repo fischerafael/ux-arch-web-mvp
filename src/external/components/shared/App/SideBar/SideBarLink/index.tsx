@@ -25,13 +25,13 @@ const SideBarLinkContainer = styled(GridContainer)`
         background: ${theme.colors.background};
     }
 
-    @media (max-width: ${theme.width.md}) {
+    @media (max-width: ${theme.width.sm}) {
         grid-template-columns: 1fr;
         padding: 0.75rem 0;
     }
 `
 const SideBarLinkAnchorText = styled(AnchorText)`
-    @media (max-width: ${theme.width.md}) {
+    @media (max-width: ${theme.width.sm}) {
         text-align: center;
         font-size: 0.65rem;
     }

@@ -7,10 +7,11 @@ import { FlexContainer, GridContainer } from '../../../design-system/layout'
 import { BreadCrumb } from '../BreadCrumb'
 
 interface Props {
-    children: ReactNode
+    children?: ReactNode
+    single?: boolean
 }
 
-export const MainSection = ({ children }: Props) => {
+export const MainSection = ({ children, single }: Props) => {
     return (
         <FlexContainer
             as="section"
@@ -29,22 +30,38 @@ export const MainSection = ({ children }: Props) => {
                 <Image src="/assets/icons/exit.svg" />
             </FlexContainer>
 
-            <BreadCrumb />
+            {/* <BreadCrumb /> */}
 
-            <MainSectionContainer
-                style={{
-                    gap: '1rem',
-                    width: '100%',
-                    height: '70%',
-                    overflowY: 'scroll'
-                }}
-            >
-                {children}
-            </MainSectionContainer>
+            {single ? (
+                <SinglMainSectionContainer
+                    style={{
+                        gap: '1rem',
+                        width: '100%',
+                        height: '70%',
+                        overflowY: 'scroll'
+                    }}
+                >
+                    {children}
+                </SinglMainSectionContainer>
+            ) : (
+                <MainSectionContainer
+                    style={{
+                        gap: '1rem',
+                        width: '100%',
+                        height: '70%',
+                        overflowY: 'scroll'
+                    }}
+                >
+                    {children}
+                </MainSectionContainer>
+            )}
         </FlexContainer>
     )
 }
 
 const MainSectionContainer = styled(GridContainer)`
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+`
+const SinglMainSectionContainer = styled(GridContainer)`
+    grid-template-columns: 1fr;
 `
