@@ -11,7 +11,7 @@ export const AtmospheresApp = () => {
             <SideBar />
             <MainSection>
                 <NavCard
-                    href="#"
+                    href="/app/atmospheres/evaluate"
                     title="Avaliar"
                     src="/assets/icons/evaluate.svg"
                     description="Avalie experiências arquitetônicas de projetos utilizados pelo algoritmo do UX Arch"
