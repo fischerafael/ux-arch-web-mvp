@@ -25,9 +25,10 @@ export const EvaluationOptions = ({ setPage, page }) => {
         <FlexContainer style={{ width: '100%', flexDirection: 'column' }}>
             {page === 1 && (
                 <>
-                    <Paragraph style={{ padding: '.5rem 0' }}>
-                        Como você se sentiria se tivesse que DESCANSAR nesse
-                        lugar?
+                    <Paragraph
+                        style={{ paddingBottom: '1rem', fontWeight: 'bold' }}
+                    >
+                        Como se sentiria DESCANSANDO nesse lugar?
                     </Paragraph>
                     <EvaluationGridContainer>
                         {options.map((option) => (
@@ -47,9 +48,10 @@ export const EvaluationOptions = ({ setPage, page }) => {
 
             {page === 2 && (
                 <>
-                    <Paragraph style={{ padding: '.5rem 0' }}>
-                        Como você se sentiria se tivesse que TRABALHAR nesse
-                        lugar?
+                    <Paragraph
+                        style={{ paddingBottom: '1rem', fontWeight: 'bold' }}
+                    >
+                        Como se sentiria TRABALHANDO nesse lugar?
                     </Paragraph>
                     <EvaluationGridContainer>
                         {options.map((option) => (
@@ -69,9 +71,10 @@ export const EvaluationOptions = ({ setPage, page }) => {
 
             {page === 3 && (
                 <>
-                    <Paragraph style={{ padding: '.5rem 0' }}>
-                        Como você se sentiria se tivesse que ESTUDAR nesse
-                        lugar?
+                    <Paragraph
+                        style={{ paddingBottom: '1rem', fontWeight: 'bold' }}
+                    >
+                        Como se sentiria ESTUDANDO nesse lugar?
                     </Paragraph>
                     <EvaluationGridContainer>
                         {options.map((option) => (
@@ -91,8 +94,10 @@ export const EvaluationOptions = ({ setPage, page }) => {
 
             {page === 4 && (
                 <>
-                    <Paragraph style={{ padding: '.5rem 0' }}>
-                        Como você se sentiria se tivesse que SE DIVERTIR nesse
+                    <Paragraph
+                        style={{ paddingBottom: '1rem', fontWeight: 'bold' }}
+                    >
+                        Como se sentiria fazendo uma atividade de LAZER nesse
                         lugar?
                     </Paragraph>
                     <EvaluationGridContainer>
@@ -113,9 +118,10 @@ export const EvaluationOptions = ({ setPage, page }) => {
 
             {page === 5 && (
                 <>
-                    <Paragraph style={{ padding: '.5rem 0' }}>
-                        Como você se sentiria se FOSSE OBRIGADO a ir nesse
-                        lugar?
+                    <Paragraph
+                        style={{ paddingBottom: '1rem', fontWeight: 'bold' }}
+                    >
+                        Como se sentiria SENDO OBRIGADO a ir nesse lugar?
                     </Paragraph>
                     <EvaluationGridContainer>
                         {options.map((option) => (
